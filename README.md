@@ -1,4 +1,8 @@
+## Heyyyo
 
+This is my first project coding with solidity and I used it to learn the basics of blockchain development. There are two solidy contracts written for the project: ```NFT.sol``` and ```NFTMarket.sol```. They control the flow of creating a token with a URI (IPFS URI using infura in this case) and buying/selling the NFTs within a marketplace.
+
+The web application is fairly basic but allows for an easy experience interacting with the marketplace contract.
 
 ## Getting Started
 
