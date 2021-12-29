@@ -1,5 +1,6 @@
 import { ethers } from 'ethers';
 import { useEffect, useState } from 'react';
+import { Image } from 'next/image';
 import axios from 'axios';
 import Web3Modal from "web3modal";
 
@@ -46,7 +47,7 @@ export default function MyAssets() {
     }
 
     if (loading === 'loaded' && !nfts.length) return (
-        <h1 className="px-20 py-10 text-3xl">You don't have any NFTs, loser</h1>
+        <h1 className="px-20 py-10 text-3xl">You dont have any NFTs, loser</h1>
     );
 
     return (
@@ -56,7 +57,7 @@ export default function MyAssets() {
               {
                 nfts.map((nft, i) => (
                   <div key={i} className="border shadow rounded-xl overflow-hidden">
-                    <img src={nft.image} className="rounded" />
+                    <Image src={nft.image} alt="Nifty image" className="rounded" />
                     <div className="p-4 bg-black">
                       <p className="text-2xl font-bold text-white">Price - {nft.price} Eth</p>
                     </div>
