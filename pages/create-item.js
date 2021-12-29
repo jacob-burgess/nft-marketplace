@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ethers } from 'ethers';
 import { create as ipfsHttpClient } from 'ipfs-http-client';
+import { Image } from 'next/image';
 import { useRouter } from 'next/router';
 import Web3Modal from 'web3modal';
 
@@ -98,7 +99,7 @@ export default function CreateItem() {
             />
             {
               fileUrl && (
-                <img className="rounded mt-4" width="350" src={fileUrl} />
+                <Image className="rounded mt-4" width="350" src={fileUrl} alt="Nifty Image" />
               )
             }
             <button 
