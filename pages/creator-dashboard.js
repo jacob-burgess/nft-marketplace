@@ -1,5 +1,6 @@
 import { ethers } from 'ethers'
 import { useEffect, useState } from 'react'
+import { Image } from 'next/image'
 import axios from 'axios'
 import Web3Modal from "web3modal"
 
@@ -77,7 +78,7 @@ export default function CreatorDashboard() {
                 {
                   sold.map((nft, i) => (
                     <div key={i} className="border shadow rounded-xl overflow-hidden">
-                      <img src={nft.image} className="rounded" />
+                      <Image src={nft.image} alt="Nifty image" className="rounded" />
                       <div className="p-4 bg-black">
                         <p className="text-2xl font-bold text-white">Price - {nft.price} Eth</p>
                       </div>
